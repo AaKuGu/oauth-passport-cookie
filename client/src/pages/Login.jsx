@@ -8,7 +8,7 @@ import {
 
 const Login = () => {
   const google = () => {
-    window.open(`${process.env.REACT_APP_BACKEND_URL}/google`, "_self");
+    window.open(`https://oauth-passport-cookie-backend.vercel.app/google`, "_self");
   };
   const github = () => {
     window.open(`${process.env.REACT_APP_BACKEND_URL}/github`, "_self");
