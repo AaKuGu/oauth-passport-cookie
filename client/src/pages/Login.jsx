@@ -11,7 +11,10 @@ const Login = () => {
     window.open(`${process.env.REACT_APP_BACKEND_URL}/google`, "_self");
   };
   const github = () => {
-    window.open(`${process.env.REACT_APP_BACKEND_URL}/github`, "_self");
+    window.open(
+      `https://oauth-passport-cookie-backend.vercel.app/auth/github`,
+      "_self"
+    );
   };
 
   return (
