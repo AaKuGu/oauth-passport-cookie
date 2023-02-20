@@ -6,13 +6,13 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const GitHubStrategy = require("passport-github2").Strategy;
 // const FacebookStrategy = require("passport-facebook").Strategy;
 
-
 passport.use(
   new GoogleStrategy(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "/auth/google/callback",
+      callbackURL:
+        "https://oauth-passport-cookie-backend.vercel.app/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       done(null, profile);
@@ -25,10 +25,11 @@ passport.use(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL: "/auth/github/callback",
+      callbackURL:
+        "https://oauth-passport-cookie-backend.vercel.app/auth/github/callback",
     },
     function (accessToken, refreshToken, profile, done) {
-      done(null,profile)
+      done(null, profile);
     }
   )
 );
