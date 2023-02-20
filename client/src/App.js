@@ -11,7 +11,7 @@ const App = () => {
 
   useEffect(() => {
     const getUser = () => {
-      fetch(`${process.env.REACT_APP_BACKEND_URL}/login/success`, {
+      fetch(`https://oauth-passport-cookie-backend.vercel.app/auth/login/success`, {
         method: "GET",
         credentials: "include",
         headers: {

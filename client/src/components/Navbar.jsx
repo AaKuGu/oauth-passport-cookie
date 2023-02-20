@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ user }) => {
   const logout = () => {
-    window.open(`${process.env.REACT_APP_BACKEND_URL}/logout`, "_self");
+    window.open(
+      `https://oauth-passport-cookie-backend.vercel.app/auth/logout`,
+      "_self"
+    );
   };
 
   return (
